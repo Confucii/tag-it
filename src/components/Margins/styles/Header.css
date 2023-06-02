@@ -1,0 +1,24 @@
+.Header + * {
+  flex: 1;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 5px;
+  background-color: var(--color-one);
+  border-radius: 10px;
+  margin-bottom: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.nav-elem {
+  list-style-type: none;
+}
+
+.link {
+  font-size: 36px;
+  text-decoration: none;
+}
