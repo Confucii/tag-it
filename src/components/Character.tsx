@@ -6,6 +6,7 @@ interface charData {
 
 function Character({ charInfo }: charData) {
   const { charName, charImage } = charInfo;
+
   return (
     <div className="Character">
       <img src={charImage} alt={charName} className="char-img" />

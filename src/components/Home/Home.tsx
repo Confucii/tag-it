@@ -1,29 +1,21 @@
 import "./styles/Home.css";
-import antiHeroes from "../../images/anti-heroes.jpg";
-import villains from "../../images/villains.jpg";
-import charImg from "../../images/account.svg";
 import StageCard from "./StageCard";
+import { stages } from "../stage-data";
 
 function Home() {
   return (
     <div className="Home">
       <StageCard
-        name="Raid"
-        stageImage={antiHeroes}
-        charInfo={[
-          { charName: "Char1", charImage: charImg },
-          { charName: "Char2", charImage: charImg },
-          { charName: "Char3", charImage: charImg },
-        ]}
+        id={stages[0].id}
+        name={stages[0].name}
+        stageImage={stages[0].stageImage}
+        charInfo={stages[0].charInfo}
       />
       <StageCard
-        name="Raid 2"
-        stageImage={villains}
-        charInfo={[
-          { charName: "Char1", charImage: charImg },
-          { charName: "Char2", charImage: charImg },
-          { charName: "Char3", charImage: charImg },
-        ]}
+        id={stages[1].id}
+        name={stages[1].name}
+        stageImage={stages[1].stageImage}
+        charInfo={stages[1].charInfo}
       />
     </div>
   );

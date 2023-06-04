@@ -1,0 +1,11 @@
+.Game {
+  width: 100%;
+  background-color: var(--color-two);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.stage-image {
+  width: 80%;
+  cursor: crosshair;
+}

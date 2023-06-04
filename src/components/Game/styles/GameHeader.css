@@ -1,0 +1,19 @@
+.GameHeader {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.game-characters {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2rem;
+}
+
+.game-characters .char-img {
+  height: 100px;
+}
