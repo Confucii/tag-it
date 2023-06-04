@@ -1,6 +1,11 @@
 import antiHeroes from "../images/anti-heroes.jpg";
 import villains from "../images/villains.jpg";
-import charImg from "../images/account.svg";
+import april from "../images/april.png";
+import rick from "../images/pickle.png";
+import ash from "../images/ash.png";
+import deckard from "../images/deckard.png";
+import mononoke from "../images/mononoke.png";
+import eleven from "../images/eleven.png";
 
 export const stages = [
   {
@@ -8,9 +13,9 @@ export const stages = [
     name: "Raid",
     stageImage: antiHeroes,
     charInfo: [
-      { charName: "Char1", charImage: charImg },
-      { charName: "Char2", charImage: charImg },
-      { charName: "Char3", charImage: charImg },
+      { charName: "San (Princess Mononoke)", charImage: mononoke },
+      { charName: "Rick Deckard (Blade Runner)", charImage: deckard },
+      { charName: "Eleven (Stranger Things)", charImage: eleven },
     ],
   },
   {
@@ -18,9 +23,9 @@ export const stages = [
     name: "Raid 2",
     stageImage: villains,
     charInfo: [
-      { charName: "Char1", charImage: charImg },
-      { charName: "Char2", charImage: charImg },
-      { charName: "Char3", charImage: charImg },
+      { charName: "Pickle Rick (Rick and Morty)", charImage: rick },
+      { charName: "Ash (Evil Dead)", charImage: ash },
+      { charName: "April O'Neil (Ninja Turtles)", charImage: april },
     ],
   },
 ];

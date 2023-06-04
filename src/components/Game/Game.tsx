@@ -7,6 +7,11 @@ function Game() {
   const params = useParams();
   const stageID = Number(params.id?.slice(-1));
 
+  function printCoordinates(e: React.MouseEvent<HTMLElement>) {
+    console.log(`X: ${document.documentElement.scrollHeight}`);
+    console.log(`Y: ${document.documentElement.scrollWidth}`);
+  }
+
   return (
     <div className="Game">
       <GameHeader stageID={stageID} />
@@ -14,6 +19,7 @@ function Game() {
         src={stages[stageID].stageImage}
         alt="stage"
         className="stage-image"
+        onClick={printCoordinates}
       />
     </div>
   );
