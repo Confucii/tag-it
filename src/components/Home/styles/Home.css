@@ -5,4 +5,14 @@
     rgba(61, 0, 0, 1) 40%,
     rgba(149, 1, 1, 1) 100%
   );
+  padding: 10px;
+  margin: 5px;
+  margin-top: 0px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
 }
