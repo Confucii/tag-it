@@ -2,7 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-two);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(61, 0, 0, 1) 40%,
+    rgba(149, 1, 1, 1) 100%
+  );
   padding: 10px;
   margin: 5px;
   margin-top: 0px;
@@ -36,7 +41,12 @@ a {
   gap: 50px;
 }
 
-img {
+.ref-img {
   filter: invert(100%);
   width: 216px;
+  transition: all 0.3s ease-in-out;
+}
+
+.ref-img:hover {
+  transform: scale(1.05);
 }

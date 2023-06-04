@@ -16,13 +16,13 @@ function Info() {
         </p>
         <div className="images">
           <a href="https://github.com/Confucii">
-            <img src={git} alt="github icon" />
+            <img className="ref-img" src={git} alt="github icon" />
           </a>
           <a href="https://www.linkedin.com/in/confucii/">
-            <img src={linkedin} alt="LinkedIn icon" />
+            <img className="ref-img" src={linkedin} alt="LinkedIn icon" />
           </a>
           <a href="https://t.me/ImRealConfucii">
-            <img src={telegram} alt="telegram icon" />
+            <img className="ref-img" src={telegram} alt="telegram icon" />
           </a>
         </div>
       </div>
