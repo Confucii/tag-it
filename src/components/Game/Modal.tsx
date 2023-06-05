@@ -1,21 +1,29 @@
 import { useState } from "react";
 import "./styles/Modal.css";
 import { useNavigate } from "react-router-dom";
+import { addScore } from "../../firebase/firebase";
 
-function Modal({ stageID }: { stageID: number; time: number }) {
+function Modal({ stageID, time }: { stageID: number; time: number }) {
   const [playerName, setPlayerName] = useState("");
   const navigator = useNavigate();
 
-  function handleClick(e: React.MouseEvent<HTMLElement>) {
+  function handleClick() {
     document.body.style.overflow = "auto";
     navigator(`../leaderboard`);
+    addScore(playerName, `leaderboard_${stageID}`, time);
+  }
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const saveBtn = document.querySelector(".save-btn") as HTMLElement;
+    saveBtn.click();
   }
 
   return (
     <div className="Modal">
       <div className="overlay" />
       <div className="game-over">
-        <form className="leaderboard-form">
+        <form onSubmit={handleSubmit} className="leaderboard-form">
           <label htmlFor="username">Username</label>
           <input
             type="text"
@@ -26,7 +34,7 @@ function Modal({ stageID }: { stageID: number; time: number }) {
             }}
             value={playerName}
           />
-          <button type="button" onClick={handleClick}>
+          <button type="button" className="save-btn" onClick={handleClick}>
             Save score
           </button>
         </form>

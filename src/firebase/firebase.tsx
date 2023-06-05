@@ -1,5 +1,11 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, getDoc } from "@firebase/firestore";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  addDoc,
+  collection,
+} from "@firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDmfXDhjaSN70BWHOzzL6lMR5YihEC75bE",
@@ -23,4 +29,15 @@ export interface charCoordinates {
 export async function getCharData(name: string) {
   const charData = await getDoc(doc(firestore, "characters", name));
   return charData.data() as charCoordinates;
+}
+
+export async function addScore(
+  name: string = "Anonymous",
+  collectionName: string,
+  time: number
+) {
+  await addDoc(collection(firestore, collectionName), {
+    name: name,
+    time: time,
+  });
 }
