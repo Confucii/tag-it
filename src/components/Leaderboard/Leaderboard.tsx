@@ -1,7 +1,7 @@
 import "./styles/Leaderboard.css";
 
-function Leaderboard() {
-  return <div className="Leaderboard">Leaderboard</div>;
+function Leaderboard({ stageID }: { stageID: number }) {
+  return <div className="Leaderboard">{stageID}</div>;
 }
 
 export default Leaderboard;

@@ -2,10 +2,11 @@ import { useParams } from "react-router-dom";
 import { stages } from "../stage-data";
 import "./styles/Game.css";
 import GameHeader from "./GameHeader";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Dropdown from "./Dropdown";
+import Modal from "./Modal";
 
-function Game() {
+function Game({ setStageID }: { setStageID: Function }) {
   const params = useParams();
   const stageID = Number(params.id?.slice(-1));
   const [dropdownPosition, setDropdownPosition] = useState([0, 0]);
@@ -13,6 +14,22 @@ function Game() {
   const [charData, setCharData] = useState(
     stages[stageID].charInfo.map((char) => char)
   );
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime((x) => (x += 1));
+    }, 1000);
+    setStageID(stageID);
+    return () => {
+      clearInterval(interval);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  if (charData.length === 0) {
+    document.body.style.overflow = "hidden";
+  }
 
   async function handleDropdown(e: React.MouseEvent<HTMLElement>) {
     const parent = e.currentTarget.parentElement || {
@@ -35,7 +52,8 @@ function Game() {
 
   return (
     <div className="Game">
-      <GameHeader charData={charData} />
+      {charData.length === 0 && <Modal stageID={stageID} time={time} />}
+      <GameHeader charData={charData} time={time} />
       <div className="stage">
         {isVisible && (
           <Dropdown

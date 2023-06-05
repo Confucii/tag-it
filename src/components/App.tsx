@@ -5,17 +5,23 @@ import Layout from "./Margins/Layout";
 import Game from "./Game/Game";
 import Leaderboard from "./Leaderboard/Leaderboard";
 import Info from "./Info/Info";
+import { useState } from "react";
 
 function App() {
+  const [stageID, setStageID] = useState(0);
+
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="leaderboard" element={<Leaderboard />} />
+          <Route index element={<Home />} />
+          <Route
+            path="leaderboard"
+            element={<Leaderboard stageID={stageID} />}
+          />
           <Route path="info" element={<Info />} />
         </Route>
-        <Route path="/:id" element={<Game />} />
+        <Route path="/:id" element={<Game setStageID={setStageID} />} />
       </Routes>
     </div>
   );

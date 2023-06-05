@@ -1,18 +1,6 @@
-import { useEffect, useState } from "react";
 import "./styles/Timer.css";
 
-function Timer() {
-  const [time, setTime] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTime((x) => (x += 1));
-    }, 1000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
+function Timer({ time }: { time: number }) {
   const seconds = time % 60;
   const minutes = (time - seconds) / 60;
 

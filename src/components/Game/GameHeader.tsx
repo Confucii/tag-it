@@ -8,12 +8,13 @@ interface charData {
     charName: string;
     charImage: string;
   }[];
+  time: number;
 }
 
-function GameHeader({ charData }: charData) {
+function GameHeader({ charData, time }: charData) {
   return (
     <div className="GameHeader">
-      <Timer />
+      <Timer time={time} />
       <div className="game-characters">
         {charData.map((char) => {
           return <Character key={char.charName} charInfo={char} />;
