@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "@firebase/firestore";
+import { getFirestore, doc, getDoc } from "@firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDmfXDhjaSN70BWHOzzL6lMR5YihEC75bE",
@@ -11,4 +11,16 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export const firestore = getFirestore(app);
+const firestore = getFirestore(app);
+
+export interface charCoordinates {
+  xStart: number;
+  xEnd: number;
+  yStart: number;
+  yEnd: number;
+}
+
+export async function getCharData(name: string) {
+  const charData = await getDoc(doc(firestore, "characters", name));
+  return charData.data() as charCoordinates;
+}
