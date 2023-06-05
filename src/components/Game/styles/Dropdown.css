@@ -1,0 +1,22 @@
+.Dropdown {
+  position: absolute;
+  background-color: black;
+}
+
+.char-option {
+  padding: 5px;
+  cursor: pointer;
+  list-style-type: none;
+  color: white;
+  font-size: 2rem;
+  border: 1px solid white;
+  transition: all 0.3s ease-in-out;
+}
+
+.Dropdown .char-option + .char-option {
+  border-top: none;
+}
+
+.char-option:hover {
+  transform: scale(1.01);
+}

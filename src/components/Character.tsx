@@ -1,14 +1,14 @@
 import "./styles/Character.css";
 
 interface charData {
-  charInfo: { charName: string; charImage: string };
+  charInfo: { id: string; charName: string; charImage: string };
 }
 
 function Character({ charInfo }: charData) {
-  const { charName, charImage } = charInfo;
+  const { id, charName, charImage } = charInfo;
 
   return (
-    <div className="Character">
+    <div id={id} className="Character">
       <img src={charImage} alt={charName} className="char-img" />
       <p className="char-name">{charName}</p>
     </div>

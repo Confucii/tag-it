@@ -1,18 +1,21 @@
 import "./styles/GameHeader.css";
 import Character from "../Character";
 import Timer from "./Timer";
-import { stages } from "../stage-data";
 
-interface stageData {
-  stageID: number;
+interface charData {
+  charData: {
+    id: string;
+    charName: string;
+    charImage: string;
+  }[];
 }
 
-function GameHeader({ stageID }: stageData) {
+function GameHeader({ charData }: charData) {
   return (
     <div className="GameHeader">
       <Timer />
       <div className="game-characters">
-        {stages[stageID].charInfo.map((char) => {
+        {charData.map((char) => {
           return <Character key={char.charName} charInfo={char} />;
         })}
       </div>

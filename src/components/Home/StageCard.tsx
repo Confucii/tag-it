@@ -6,7 +6,7 @@ interface stageCardProps {
   id: number;
   name: string;
   stageImage: string;
-  charInfo: { charName: string; charImage: string }[];
+  charInfo: { id: string; charName: string; charImage: string }[];
 }
 
 function StageCard({ id, name, stageImage, charInfo }: stageCardProps) {

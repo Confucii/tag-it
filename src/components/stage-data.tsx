@@ -13,9 +13,17 @@ export const stages = [
     name: "Raid",
     stageImage: antiHeroes,
     charInfo: [
-      { charName: "San (Princess Mononoke)", charImage: mononoke },
-      { charName: "Rick Deckard (Blade Runner)", charImage: deckard },
-      { charName: "Eleven (Stranger Things)", charImage: eleven },
+      {
+        id: "mononoke",
+        charName: "San (Princess Mononoke)",
+        charImage: mononoke,
+      },
+      {
+        id: "deckard",
+        charName: "Rick Deckard (Blade Runner)",
+        charImage: deckard,
+      },
+      { id: "eleven", charName: "Eleven (Stranger Things)", charImage: eleven },
     ],
   },
   {
@@ -23,9 +31,17 @@ export const stages = [
     name: "Raid 2",
     stageImage: villains,
     charInfo: [
-      { charName: "Pickle Rick (Rick and Morty)", charImage: rick },
-      { charName: "Ash (Evil Dead)", charImage: ash },
-      { charName: "April O'Neil (Ninja Turtles)", charImage: april },
+      {
+        id: "pickle",
+        charName: "Pickle Rick (Rick and Morty)",
+        charImage: rick,
+      },
+      { id: "ash", charName: "Ash (Evil Dead)", charImage: ash },
+      {
+        id: "april",
+        charName: "April O'Neil (Ninja Turtles)",
+        charImage: april,
+      },
     ],
   },
 ];
