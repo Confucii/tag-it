@@ -2,33 +2,53 @@ import { useParams } from "react-router-dom";
 import { stages } from "../stage-data";
 import "./styles/Game.css";
 import GameHeader from "./GameHeader";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Dropdown from "./Dropdown";
 import Modal from "./Modal";
+import ChoiceStatus from "./ChoiceStatus";
 
 function Game({ setStageID }: { setStageID: Function }) {
   const params = useParams();
   const stageID = Number(params.id?.slice(-1));
   const [dropdownPosition, setDropdownPosition] = useState([0, 0]);
-  const [isVisible, setIsVisible] = useState(false);
+  const [dropdownIsVisible, setDropdownIsVisible] = useState(false);
   const [charData, setCharData] = useState(
     stages[stageID].charInfo.map((char) => char)
   );
+  const [choiceStatusData, setChoiceStatusData] = useState({
+    bg: "",
+    text: "",
+    status: false,
+  });
   const [time, setTime] = useState(0);
+  const timeIntervalRef = useRef<ReturnType<typeof setInterval>>();
+  const choiceStatusTimeoutRef = useRef<ReturnType<typeof setInterval>>();
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    timeIntervalRef.current = setInterval(() => {
       setTime((x) => (x += 1));
     }, 1000);
     setStageID(stageID);
     return () => {
-      clearInterval(interval);
+      clearInterval(timeIntervalRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    if (choiceStatusTimeoutRef.current) {
+      clearInterval(choiceStatusTimeoutRef.current);
+    }
+
+    choiceStatusTimeoutRef.current = setTimeout(() => {
+      setChoiceStatusData({ ...choiceStatusData, status: false });
+      choiceStatusTimeoutRef.current = undefined;
+    }, 3000);
+  }, [choiceStatusData]);
+
   if (charData.length === 0) {
     document.body.style.overflow = "hidden";
+    clearInterval(timeIntervalRef.current);
   }
 
   async function handleDropdown(e: React.MouseEvent<HTMLElement>) {
@@ -47,7 +67,7 @@ function Game({ setStageID }: { setStageID: Function }) {
       100;
 
     setDropdownPosition([xPos, yPos]);
-    setIsVisible(!isVisible);
+    setDropdownIsVisible(!dropdownIsVisible);
   }
 
   return (
@@ -55,11 +75,15 @@ function Game({ setStageID }: { setStageID: Function }) {
       {charData.length === 0 && <Modal stageID={stageID} time={time} />}
       <GameHeader charData={charData} time={time} />
       <div className="stage">
-        {isVisible && (
+        {choiceStatusData.status && (
+          <ChoiceStatus choiceStatusData={choiceStatusData} />
+        )}
+        {dropdownIsVisible && (
           <Dropdown
+            setChoiceStatusData={setChoiceStatusData}
             dropdownPosition={dropdownPosition}
             charData={charData}
-            setIsVisible={setIsVisible}
+            setIsVisible={setDropdownIsVisible}
             setCharData={setCharData}
           />
         )}

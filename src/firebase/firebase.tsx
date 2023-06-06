@@ -32,10 +32,11 @@ export async function getCharData(name: string) {
 }
 
 export async function addScore(
-  name: string = "Anonymous",
+  name: string,
   collectionName: string,
   time: number
 ) {
+  if (name === "") name = "Anonymous";
   await addDoc(collection(firestore, collectionName), {
     name: name,
     time: time,

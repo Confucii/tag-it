@@ -37,7 +37,8 @@
 }
 
 .characters {
-  height: 22%;
+  overflow: hidden;
+  height: 25%;
   background-color: rgba(0, 0, 0, 0.85);
   display: flex;
   gap: 5px;
