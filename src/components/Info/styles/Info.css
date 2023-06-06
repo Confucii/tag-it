@@ -33,17 +33,18 @@
 a {
   color: var(--color-three);
   text-decoration: none;
+  width: 25%;
 }
 
 .images {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 50px;
 }
 
 .ref-img {
   filter: invert(100%);
-  width: 216px;
+  width: 100%;
   transition: all 0.3s ease-in-out;
 }
 

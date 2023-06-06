@@ -1,0 +1,22 @@
+.LeaderboardStageCard {
+  height: 100%;
+  width: 35%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px dashed var(--color-four);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.LeaderboardStageCard:hover {
+  transform: scale(1.1);
+}
+
+.leaderboard-stage-name {
+  background-color: black;
+  width: 20%;
+  border-radius: 10px;
+  color: white;
+}

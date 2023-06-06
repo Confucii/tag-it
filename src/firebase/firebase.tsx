@@ -5,6 +5,9 @@ import {
   getDoc,
   addDoc,
   collection,
+  query,
+  orderBy,
+  getDocs,
 } from "@firebase/firestore";
 
 const firebaseConfig = {
@@ -26,9 +29,24 @@ export interface charCoordinates {
   yEnd: number;
 }
 
+export interface scoreData {
+  name: string;
+  time: number;
+}
+
 export async function getCharData(name: string) {
   const charData = await getDoc(doc(firestore, "characters", name));
   return charData.data() as charCoordinates;
+}
+
+export async function getScores(id: number) {
+  const scoreQuery = query(
+    collection(firestore, `leaderboard_${id}`),
+    orderBy("time", "asc")
+  );
+  const scoresDocs = await getDocs(scoreQuery);
+  const scores = scoresDocs.docs.map((doc) => doc.data());
+  return scores as scoreData[];
 }
 
 export async function addScore(

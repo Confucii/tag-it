@@ -17,7 +17,7 @@ function App() {
           <Route index element={<Home />} />
           <Route
             path="leaderboard"
-            element={<Leaderboard stageID={stageID} />}
+            element={<Leaderboard stageID={stageID} setStageID={setStageID} />}
           />
           <Route path="info" element={<Info />} />
         </Route>
