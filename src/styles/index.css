@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pangolin&family=Quantico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 :root {
   --color-one: #000000;
@@ -12,5 +12,5 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Pangolin", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
