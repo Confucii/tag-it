@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/tag-it/static/css/main.702c0864.css",
+    "main.js": "/tag-it/static/js/main.f2a68b43.js",
+    "static/media/anti-heroes.jpg": "/tag-it/static/media/anti-heroes.d48bb76aa2118c7c598d.jpg",
+    "static/media/villains.jpg": "/tag-it/static/media/villains.7f7e014b7c6f2aacd35c.jpg",
+    "static/media/mononoke.png": "/tag-it/static/media/mononoke.05b8c6473b7d65f4d6ec.png",
+    "static/media/eleven.png": "/tag-it/static/media/eleven.a8169d408871421f1e39.png",
+    "static/media/ash.png": "/tag-it/static/media/ash.0abf151951e9824bd480.png",
+    "static/media/pickle.png": "/tag-it/static/media/pickle.53d359d9366671b99a6d.png",
+    "static/media/april.png": "/tag-it/static/media/april.65ae1037b899bbc1c541.png",
+    "static/media/deckard.png": "/tag-it/static/media/deckard.eaaf2e886315e0c92dd1.png",
+    "static/media/linkedin-svgrepo-com.svg": "/tag-it/static/media/linkedin-svgrepo-com.c11a51dc5395675c338ae20f84fcfa75.svg",
+    "static/media/telegram-svgrepo-com.svg": "/tag-it/static/media/telegram-svgrepo-com.fd11c5664643c3d8d90c60fd381a4b7e.svg",
+    "static/media/iconmonstr-github-2.svg": "/tag-it/static/media/iconmonstr-github-2.56951958776829fd87e9049fa1927c16.svg",
+    "index.html": "/tag-it/index.html",
+    "main.702c0864.css.map": "/tag-it/static/css/main.702c0864.css.map",
+    "main.f2a68b43.js.map": "/tag-it/static/js/main.f2a68b43.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.702c0864.css",
+    "static/js/main.f2a68b43.js"
+  ]
+}
