@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tag-it/static/css/main.702c0864.css",
-    "main.js": "/tag-it/static/js/main.f2a68b43.js",
+    "main.js": "/tag-it/static/js/main.d54473f7.js",
     "static/media/anti-heroes.jpg": "/tag-it/static/media/anti-heroes.d48bb76aa2118c7c598d.jpg",
     "static/media/villains.jpg": "/tag-it/static/media/villains.7f7e014b7c6f2aacd35c.jpg",
     "static/media/mononoke.png": "/tag-it/static/media/mononoke.05b8c6473b7d65f4d6ec.png",
@@ -15,10 +15,10 @@
     "static/media/iconmonstr-github-2.svg": "/tag-it/static/media/iconmonstr-github-2.56951958776829fd87e9049fa1927c16.svg",
     "index.html": "/tag-it/index.html",
     "main.702c0864.css.map": "/tag-it/static/css/main.702c0864.css.map",
-    "main.f2a68b43.js.map": "/tag-it/static/js/main.f2a68b43.js.map"
+    "main.d54473f7.js.map": "/tag-it/static/js/main.d54473f7.js.map"
   },
   "entrypoints": [
     "static/css/main.702c0864.css",
-    "static/js/main.f2a68b43.js"
+    "static/js/main.d54473f7.js"
   ]
 }
