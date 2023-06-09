@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tag-it/static/css/main.38737a49.css",
+    "main.css": "/tag-it/static/css/main.d2e93954.css",
     "main.js": "/tag-it/static/js/main.1cfe9823.js",
     "static/media/anti-heroes.jpg": "/tag-it/static/media/anti-heroes.d48bb76aa2118c7c598d.jpg",
     "static/media/villains.jpg": "/tag-it/static/media/villains.7f7e014b7c6f2aacd35c.jpg",
@@ -14,11 +14,11 @@
     "static/media/telegram-svgrepo-com.svg": "/tag-it/static/media/telegram-svgrepo-com.fd11c5664643c3d8d90c60fd381a4b7e.svg",
     "static/media/iconmonstr-github-2.svg": "/tag-it/static/media/iconmonstr-github-2.56951958776829fd87e9049fa1927c16.svg",
     "index.html": "/tag-it/index.html",
-    "main.38737a49.css.map": "/tag-it/static/css/main.38737a49.css.map",
+    "main.d2e93954.css.map": "/tag-it/static/css/main.d2e93954.css.map",
     "main.1cfe9823.js.map": "/tag-it/static/js/main.1cfe9823.js.map"
   },
   "entrypoints": [
-    "static/css/main.38737a49.css",
+    "static/css/main.d2e93954.css",
     "static/js/main.1cfe9823.js"
   ]
 }
